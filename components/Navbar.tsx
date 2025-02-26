@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3 sm:px-6 lg:max-w-7xl">
         <Link href="/">
           <h1 className="text-2xl font-bold md:text-4xl">
-            <span className="text-primary">E-</span>COMMERCE
+            <span className="text-primary">Group </span>8
           </h1>
         </Link>
 
