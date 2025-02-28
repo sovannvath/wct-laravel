@@ -1,106 +1,112 @@
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <footer className="bg-gray-100 py-8">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+          {/* Logo and Description */}
+          <div className="mb-6 flex flex-col items-center md:mb-0 md:items-start">
+            <Link href="/" className="mb-4">
+              <Image
+                src="/logo.png"
+                width={120}
+                height={40}
+                alt="Fashion Logo"
+              />
+            </Link>
+            <p className="max-w-xs text-center text-gray-500 md:text-left">
+              We sell the best fashion for the best price in the world. Come and
+              check it out!
+            </p>
+          </div>
+
           {/* Quick Links */}
-          <div className="mb-8 md:mb-0">
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="mb-4 text-lg font-semibold text-black">Quick Links</h3>
+            <ul className="space-y-2 text-center md:text-left">
               <li>
-                <Link href="/" className="hover:text-gray-400 transition-colors">
-                  Home
+                <Link
+                  href="/about"
+                  className="text-gray-500 transition duration-100 hover:text-gray-700"
+                >
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/men" className="hover:text-gray-400 transition-colors">
-                  Men
+                <Link
+                  href="/contact"
+                  className="text-gray-500 transition duration-100 hover:text-gray-700"
+                >
+                  Contact
                 </Link>
               </li>
               <li>
-                <Link href="/women" className="hover:text-gray-400 transition-colors">
-                  Women
+                <Link
+                  href="/privacy"
+                  className="text-gray-500 transition duration-100 hover:text-gray-700"
+                >
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/kids" className="hover:text-gray-400 transition-colors">
-                  Kids
+                <Link
+                  href="/terms"
+                  className="text-gray-500 transition duration-100 hover:text-gray-700"
+                >
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Social Media */}
-          <div className="mb-8 md:mb-0">
-            <h3 className="text-lg font-bold mb-4">Follow Us</h3>
+          {/* Social Media Links */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="mb-4 text-lg font-semibold text-black">
+              Follow Us
+            </h3>
             <div className="flex space-x-4">
-              <a
+              <Link
                 href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
+                className="text-gray-500 transition duration-100 hover:text-gray-700"
               >
-                <FaFacebook size={24} />
-              </a>
-              <a
+                <Image
+                  src="/icons/facebook.svg"
+                  width={24}
+                  height={24}
+                  alt="Facebook"
+                />
+              </Link>
+              <Link
                 href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
+                className="text-gray-500 transition duration-100 hover:text-gray-700"
               >
-                <FaTwitter size={24} />
-              </a>
-              <a
+                <Image
+                  src="/icons/twitter.svg"
+                  width={24}
+                  height={24}
+                  alt="Twitter"
+                />
+              </Link>
+              <Link
                 href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
+                className="text-gray-500 transition duration-100 hover:text-gray-700"
               >
-                <FaInstagram size={24} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-400 transition-colors"
-              >
-                <FaLinkedin size={24} />
-              </a>
+                <Image
+                  src="/icons/instagram.svg"
+                  width={24}
+                  height={24}
+                  alt="Instagram"
+                />
+              </Link>
             </div>
-          </div>
-
-          {/* Newsletter */}
-          <div className="col-span-2">
-            <h3 className="text-lg font-bold mb-4">Subscribe to Our Newsletter</h3>
-            <p className="mb-4">
-              Get the latest updates on new products and exclusive offers.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 p-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button
-                type="submit"
-                className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Your Brand Name. All rights
-            reserved.
-          </p>
+        <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} Fashion Store. All rights reserved.
         </div>
       </div>
     </footer>

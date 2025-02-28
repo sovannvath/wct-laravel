@@ -1,6 +1,6 @@
+
 import { createClient, SanityClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
-
 // Type definition for the environment variables
 interface SanityEnv {
   NEXT_PUBLIC_SANITY_PROJECT_ID: string
